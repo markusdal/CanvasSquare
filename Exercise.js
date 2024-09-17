@@ -16,8 +16,8 @@ const maxAttempts = 10000;
 function isOverlapping(x, y) {
 
   for (let square of squares) {
-    let distanceX = x - square.x;
-    let distanceY = y - square.y;
+    let distanceX = Math.abs(x - square.x);
+    let distanceY = Math.abs(y - square.y);
 
     if (distanceX < squareSize && distanceY < squareSize) {
       return true;
